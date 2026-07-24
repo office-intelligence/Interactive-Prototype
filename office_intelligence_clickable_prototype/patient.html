@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Office Intelligence — Patient SuperChart</title><link rel="stylesheet" href="styles.css"></head>
+    <body><div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <div><h1>OFFICE INTELLIGENCE</h1><small>The AI Operating System for Healthcare</small></div>
+      </div>
+      <nav class="nav"><a href="dashboard.html" class=""><span class="icon">◫</span><span class="label">Executive Dashboard</span></a>
+<a href="scheduler.html" class=""><span class="icon">⌘</span><span class="label">AI Scheduler</span></a>
+<a href="patient.html" class="active"><span class="icon">♙</span><span class="label">Patient SuperChart</span></a>
+<a href="continuous-care.html" class=""><span class="icon">♥</span><span class="label">Continuous Care</span></a>
+<a href="#" class=""><span class="icon">⌂</span><span class="label">My Practice</span></a>
+<a href="#" class=""><span class="icon">▤</span><span class="label">Billing & RCM</span></a>
+<a href="#" class=""><span class="icon">◒</span><span class="label">Analytics</span></a>
+<a href="#" class=""><span class="icon">✉</span><span class="label">Messages</span></a>
+<a href="#" class=""><span class="icon">⚙</span><span class="label">Settings</span></a></nav>
+      <div class="sidebar-footer">Nightingale AI<br><small>Always here. Always helping.</small></div>
+    </aside>
+    <main class="main">
+<div class="topbar"><div class="patient-head"><div class="avatar">MJ</div><div><h2>Mary Johnson</h2><div class="muted">MRN 123456 · DOB 03/12/1964 · Female</div></div></div>
+<div class="actions"><button class="btn">Message Patient</button><button class="btn primary">New Visit</button></div></div>
+<div class="grid cols-3">
+<section class="card"><h3>AI Patient Summary</h3><p>61-year-old female with osteoarthritis scheduled for right total knee arthroplasty on 05/20/2025.</p>
+<div class="list"><div>✓ Medical clearance completed</div><div>✓ Labs within normal limits</div><div>✓ EKG normal</div><div>✓ Low STOP-BANG score</div><div>✓ No medication holds required</div></div>
+<p><button class="btn" onclick="openAI('Mary is ready for surgery. I can explain every readiness item or prepare patient instructions.')">Ask Nightingale</button></p></section>
+<section class="card"><h3>Upcoming Surgery</h3><p><strong>Right Total Knee Arthroplasty</strong><br>05/20/2025 · 7:30 AM · OR 1<br>John Smith, MD</p>
+<div class="list"><div class="list-item"><span>H&P</span><span class="badge green">Complete</span></div><div class="list-item"><span>Consent</span><span class="badge green">Signed</span></div><div class="list-item"><span>Labs</span><span class="badge green">Complete</span></div><div class="list-item"><span>Insurance Auth</span><span class="badge green">Approved</span></div></div></section>
+<section class="card ai-panel"><h3>Nightingale AI</h3><p><strong>Mary is ready for surgery.</strong></p><div class="list"><div>✓ All clear</div><div>✓ Labs normal</div><div>✓ EKG normal</div><div>✓ Consent signed</div><div class="warn-text">⚠ Hold ibuprofen 7 days prior</div></div><p><button class="btn primary" onclick="showToast('Patient instructions prepared')">Prepare Instructions</button></p></section>
+</div>
+<div class="tabs"><button class="active">Timeline</button><button>Documents</button><button>Labs</button><button>Imaging</button><button>Medications</button><button>Problems</button></div>
+<div class="timeline">
+<div class="event"><div class="muted">Apr 28</div><strong>X-Ray Knee</strong><br>Imaging</div>
+<div class="event"><div class="muted">May 2</div><strong>Pre-Op Visit</strong><br>John Smith, MD</div>
+<div class="event"><div class="muted">May 3</div><strong>Lab Results</strong><br>CBC, BMP</div>
+<div class="event"><div class="muted">May 3</div><strong>EKG</strong><br>Normal</div>
+<div class="event"><div class="muted">May 10</div><strong>Pre-Op Call</strong><br>Nurse</div>
+<div class="event"><div class="muted">May 20</div><strong>Surgery</strong><br>Scheduled</div>
+</div>
+</main></div>
+    <div class="overlay" id="overlay" onclick="closeAI()"></div>
+    <aside class="drawer" id="drawer"><div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="ai-title"><div class="ai-dot"></div><strong>Nightingale AI</strong></div><button class="btn" onclick="closeAI()">Close</button>
+    </div><div id="chat" class="chat"></div><div class="chat-input"><input id="chatText" placeholder="Ask Nightingale..." onkeydown="if(event.key==='Enter')sendChat()"><button class="btn primary" onclick="sendChat()">Send</button></div></aside>
+    <div class="toast" id="toast"></div><script src="app.js"></script></body></html>

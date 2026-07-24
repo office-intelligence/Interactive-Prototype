@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Office Intelligence — Executive Dashboard</title><link rel="stylesheet" href="styles.css"></head>
+    <body><div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <div><h1>OFFICE INTELLIGENCE</h1><small>The AI Operating System for Healthcare</small></div>
+      </div>
+      <nav class="nav"><a href="dashboard.html" class="active"><span class="icon">◫</span><span class="label">Executive Dashboard</span></a>
+<a href="scheduler.html" class=""><span class="icon">⌘</span><span class="label">AI Scheduler</span></a>
+<a href="patient.html" class=""><span class="icon">♙</span><span class="label">Patient SuperChart</span></a>
+<a href="continuous-care.html" class=""><span class="icon">♥</span><span class="label">Continuous Care</span></a>
+<a href="#" class=""><span class="icon">⌂</span><span class="label">My Practice</span></a>
+<a href="#" class=""><span class="icon">▤</span><span class="label">Billing & RCM</span></a>
+<a href="#" class=""><span class="icon">◒</span><span class="label">Analytics</span></a>
+<a href="#" class=""><span class="icon">✉</span><span class="label">Messages</span></a>
+<a href="#" class=""><span class="icon">⚙</span><span class="label">Settings</span></a></nav>
+      <div class="sidebar-footer">Nightingale AI<br><small>Always here. Always helping.</small></div>
+    </aside>
+    <main class="main">
+<div class="topbar"><div><h2>Executive Dashboard</h2><div class="muted">Friday, May 16, 2025 · 7:42 AM</div></div>
+<div class="actions"><button class="btn" onclick="openAI('Here is your morning operations brief. Two surgeries require attention and one authorization is still pending.')">Ask Nightingale</button><button class="btn primary" onclick="showToast('Dashboard customized')">Customize Dashboard</button></div></div>
+<div class="grid cols-3">
+  <section class="card"><h3>Nightingale AI Morning Brief</h3><p>Good morning, Dr. Smith. Here is what matters today.</p>
+    <div class="list"><div>✓ 2 surgeries need attention</div><div>✓ 3 patient messages</div><div>✓ 5 results awaiting review</div><div>✓ 1 insurance authorization pending</div></div>
+    <p><button class="btn" onclick="openAI('I can walk you through all 11 priority items and prepare actions for approval.')">View all 11</button></p></section>
+  <section class="card"><h3>Practice Health Score</h3><div class="kpi good">92</div><div>Excellent</div><p class="muted">+6 points vs yesterday</p></section>
+  <section class="card"><h3>Financial Overview</h3><div class="grid cols-3"><div><div class="muted">Net Revenue</div><div class="kpi">$86,245</div></div><div><div class="muted">Collected</div><div class="kpi">$67,318</div></div><div><div class="muted">AR Days</div><div class="kpi">32</div></div></div></section>
+</div>
+<section class="card" style="margin-top:16px"><div style="display:flex;justify-content:space-between"><h3>Today's OR Schedule</h3><a href="scheduler.html" class="good">View Full Schedule →</a></div>
+<div class="grid cols-4">
+<div><strong>OR 1</strong><p>7:30 AM<br>Total Knee Arthroplasty<br><span class="muted">John Smith, MD</span></p><span class="badge green">In Progress</span></div>
+<div><strong>OR 2</strong><p>8:00 AM<br>Shoulder Arthroscopy<br><span class="muted">Michael Lee, MD</span></p><span class="badge orange">Delay 12 min</span></div>
+<div><strong>OR 3</strong><p>7:45 AM<br>ACL Reconstruction<br><span class="muted">James Wilson, MD</span></p><span class="badge green">In Progress</span></div>
+<div><strong>OR 4</strong><p>8:30 AM<br>Spinal Fusion<br><span class="muted">Robert Davis, MD</span></p><span class="badge">Scheduled</span></div>
+</div></section>
+<div class="grid cols-4" style="margin-top:16px">
+<div class="card"><div class="muted">Cases Today</div><div class="kpi">24</div></div>
+<div class="card"><div class="muted">OR Utilization</div><div class="kpi">85%</div></div>
+<div class="card"><div class="muted">First Case On Time</div><div class="kpi">94%</div></div>
+<div class="card ai-panel"><h3>Nightingale Recommendation</h3><p>Move the second case in OR 2 up by 15 minutes to optimize the day.</p><button class="btn primary" onclick="showToast('Schedule optimization staged for approval')">Optimize Schedule</button></div>
+</main></div>
+    <div class="overlay" id="overlay" onclick="closeAI()"></div>
+    <aside class="drawer" id="drawer"><div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="ai-title"><div class="ai-dot"></div><strong>Nightingale AI</strong></div><button class="btn" onclick="closeAI()">Close</button>
+    </div><div id="chat" class="chat"></div><div class="chat-input"><input id="chatText" placeholder="Ask Nightingale..." onkeydown="if(event.key==='Enter')sendChat()"><button class="btn primary" onclick="sendChat()">Send</button></div></aside>
+    <div class="toast" id="toast"></div><script src="app.js"></script></body></html>

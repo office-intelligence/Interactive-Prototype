@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Project Nightingale — Continuous Care</title><link rel="stylesheet" href="styles.css"></head>
+    <body><div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <div><h1>OFFICE INTELLIGENCE</h1><small>The AI Operating System for Healthcare</small></div>
+      </div>
+      <nav class="nav"><a href="dashboard.html" class=""><span class="icon">◫</span><span class="label">Executive Dashboard</span></a>
+<a href="scheduler.html" class=""><span class="icon">⌘</span><span class="label">AI Scheduler</span></a>
+<a href="patient.html" class=""><span class="icon">♙</span><span class="label">Patient SuperChart</span></a>
+<a href="continuous-care.html" class="active"><span class="icon">♥</span><span class="label">Continuous Care</span></a>
+<a href="#" class=""><span class="icon">⌂</span><span class="label">My Practice</span></a>
+<a href="#" class=""><span class="icon">▤</span><span class="label">Billing & RCM</span></a>
+<a href="#" class=""><span class="icon">◒</span><span class="label">Analytics</span></a>
+<a href="#" class=""><span class="icon">✉</span><span class="label">Messages</span></a>
+<a href="#" class=""><span class="icon">⚙</span><span class="label">Settings</span></a></nav>
+      <div class="sidebar-footer">Nightingale AI<br><small>Always here. Always helping.</small></div>
+    </aside>
+    <main class="main">
+<div class="topbar"><div><h2>Continuous Care Intelligence</h2><div class="muted">Proactive care. Earlier intervention. Better outcomes.</div></div>
+<div class="actions"><button class="btn">My Patients</button><button class="btn primary" onclick="openAI('I am monitoring 156 patients and have prioritized 7 for high-risk review today.')">Ask Guardian</button></div></div>
+<div class="grid cols-3">
+<section class="card" style="grid-column:span 2"><div style="display:flex;justify-content:space-between;align-items:center"><h3>Patients Requiring Attention Today</h3><div><span class="badge red">7 High</span> <span class="badge orange">12 Medium</span> <span class="badge green">24 Low</span></div></div>
+<table class="table"><thead><tr><th>Patient</th><th>Condition</th><th>Risk</th><th>Key Changes</th><th>Action</th></tr></thead><tbody>
+<tr><td>Mary Johnson</td><td>Heart Failure</td><td><div class="risk high">87</div></td><td>↑ Weight 3.2 lb · ↑ BP · ↓ adherence</td><td><button class="btn primary" onclick="openAI('Mary shows a pattern consistent with early heart-failure decompensation. Nurse outreach today is recommended.')">Call Today</button></td></tr>
+<tr><td>Robert Williams</td><td>Hypertension</td><td><div class="risk high">72</div></td><td>BP 160/98 · activity down 30%</td><td><button class="btn">Medication Review</button></td></tr>
+<tr><td>Linda Davis</td><td>Diabetes Type 2</td><td><div class="risk med">65</div></td><td>Glucose avg 185 · TIR 62%</td><td><button class="btn">Nurse Outreach</button></td></tr>
+<tr><td>James Brown</td><td>COPD</td><td><div class="risk med">58</div></td><td>O2 sat 92% · SOB reported</td><td><button class="btn">Check In</button></td></tr>
+<tr><td>Patricia Wilson</td><td>Post-Op Knee</td><td><div class="risk low">40</div></td><td>Pain improving · activity improving</td><td><button class="btn">Continue Plan</button></td></tr>
+</tbody></table></section>
+<section class="card ai-panel"><h3>Nightingale Guardian</h3><p>Monitoring 24/7 for early signs of decline.</p><div class="list"><div>Weight Scale <span class="good">Connected</span></div><div>Blood Pressure <span class="good">Connected</span></div><div>Pulse Oximeter <span class="good">Connected</span></div><div>Activity Tracker <span class="good">Connected</span></div><div>Glucose Monitor <span class="good">Connected</span></div></div>
+<p><button class="btn primary" onclick="showToast('Device panel opened')">View Devices</button></p></section>
+</div>
+<section class="card" style="margin-top:16px"><h3>Selected Patient Overview — Mary Johnson</h3>
+<div class="grid cols-4"><div><div class="muted">Weight</div><div class="kpi danger">+3.2 lb</div></div><div><div class="muted">Blood Pressure</div><div class="kpi danger">152/94</div></div><div><div class="muted">Heart Rate</div><div class="kpi">92 bpm</div></div><div><div class="muted">O₂ Saturation</div><div class="kpi good">96%</div></div></div>
+<div class="card ai-panel" style="margin-top:12px"><h3>AI Insight</h3><p>Risk is elevated due to weight gain, blood-pressure increase, and reduced medication adherence. Recommend outreach today.</p><button class="btn primary" onclick="showToast('Outreach plan generated')">Generate Outreach Plan</button></div>
+</section>
+</main></div>
+    <div class="overlay" id="overlay" onclick="closeAI()"></div>
+    <aside class="drawer" id="drawer"><div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="ai-title"><div class="ai-dot"></div><strong>Nightingale AI</strong></div><button class="btn" onclick="closeAI()">Close</button>
+    </div><div id="chat" class="chat"></div><div class="chat-input"><input id="chatText" placeholder="Ask Nightingale..." onkeydown="if(event.key==='Enter')sendChat()"><button class="btn primary" onclick="sendChat()">Send</button></div></aside>
+    <div class="toast" id="toast"></div><script src="app.js"></script></body></html>

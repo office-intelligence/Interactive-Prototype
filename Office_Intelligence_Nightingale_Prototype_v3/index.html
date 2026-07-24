@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Office Intelligence Home — Nightingale AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="mark">OI</div><div>Office Intelligence<small>Nightingale AI</small></div></div>
+    <div class="org"><b>Summit Surgical Center</b><span>Beverly Hills, California</span></div>
+    <div class="nav">
+      <div class="nav-title">Workspace</div>
+      <a href="index.html" data-page="home">⌂ Home</a>
+      <a href="scheduler.html" data-page="scheduler">▦ Schedule</a>
+      <a href="patient-chart.html" data-page="patient">◎ Patient Chart</a>
+      <a href="billing.html" data-page="billing">$ Billing &amp; Invoices</a>
+      <a href="administration.html" data-page="admin">◇ Administration</a>
+      <a href="intake.html" data-page="intake">⇥ Admission &amp; Intake <span class="count">5</span></a>
+    </div>
+    <div class="nightingale-side">
+      <b>✦ Nightingale AI</b>
+      <p>Your AI assistant is ready to help coordinate the day.</p>
+      <button class="btn soft" type="button" id="sideAsk">Ask Nightingale</button>
+    </div>
+    <div class="sidebar-foot"><div class="avatar">KT</div><div class="who"><b>Kevin Tehrani</b><span>Practice owner</span></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div><h1>Office Intelligence Home</h1><div class="sub">Friday, July 24, 2026</div></div>
+      <div class="top-actions"><input class="search" aria-label="Global search" placeholder="Search patients, appointments, documents…"><button class="iconbtn" aria-label="Notifications">◌</button><div class="avatar">KT</div></div>
+    </header>
+
+    <div class="content home-content">
+      <section class="home-top">
+        <div class="card morning-brief">
+          <div class="ai-title"><div class="spark">✦</div>Nightingale morning brief <span class="ai-pill">AI</span></div>
+          <div class="brief-grid">
+            <ul>
+              <li>Five procedures are scheduled today.</li>
+              <li>Four patients are fully ready.</li>
+              <li>One patient requires an EKG result and pre-op photo review.</li>
+              <li>No critical laboratory or staffing issues are present.</li>
+              <li>Operating rooms are on schedule.</li>
+            </ul>
+            <div class="recommended"><b>Recommended action</b><p>Request Patricia DePoli's EKG result before the 8:00 AM case.</p><button class="btn soft" type="button">View day details</button></div>
+          </div>
+        </div>
+        <div class="home-kpis">
+          <div class="card compact-kpi"><span class="kpi-icon blue">◉</span><b>5</b><small>Patients Today</small></div>
+          <div class="card compact-kpi"><span class="kpi-icon green">✓</span><b>4</b><small>Ready for Surgery</small></div>
+          <div class="card compact-kpi"><span class="kpi-icon amber">△</span><b>1</b><small>Needs Attention</small></div>
+          <div class="card compact-kpi"><span class="kpi-icon purple">↗</span><b>92%</b><small>OR Utilization</small></div>
+        </div>
+      </section>
+
+      <div class="home-layout">
+        <section class="card schedule-panel">
+          <div class="panel-title"><h2>Today's Schedule <span class="count">5</span></h2><a href="scheduler.html" class="btn link-button">View Full Schedule</a></div>
+          <div class="patient-schedule">
+            <article class="patient-box">
+              <div class="patient-time">7:00<br><small>AM</small></div><div class="avatar photo">DW</div>
+              <div class="patient-identity"><a class="patient-link" href="patient-chart.html"><b>Danielle Weaver</b></a><span>53 · Female</span><span>ID: 114202</span><span>(424) 400-9209</span><em>Stuart Linder, MD</em></div>
+              <div class="procedure"><b>Planned procedure</b><p>Bilateral saline implant removal and replacement, open capsulectomy, and bilateral mastopexy.</p></div>
+              <div class="readiness ready"><b>AI Readiness Summary</b><p>All pre-op requirements are complete. Labs are within normal limits. Cleared for surgery.</p><span><strong>Allergies:</strong> Penicillin</span></div>
+              <div class="labs"><b>Relevant labs</b><span class="ok">● CBC — Normal</span><span class="ok">● BMP — Normal</span><span class="ok">● PT/INR — Normal</span></div>
+              <a class="chart-link" href="patient-chart.html" aria-label="Open Danielle Weaver chart">View Chart →</a>
+            </article>
+
+            <article class="patient-box">
+              <div class="patient-time">8:00<br><small>AM</small></div><div class="avatar photo alt">PD</div>
+              <div class="patient-identity"><a class="patient-link" href="patient-chart.html"><b>Patricia DePoli</b></a><span>66 · Female</span><span>ID: 113850</span><span>(847) 721-1289</span><em>Guy Massry, MD</em></div>
+              <div class="procedure"><b>Planned procedure</b><p>Upper and lower blepharoplasty, fat repositioning, and possible ptosis repair.</p></div>
+              <div class="readiness review"><b>AI Readiness Summary</b><p>Pre-op photo review remains pending. EKG result is ordered but not received. Otherwise ready.</p><span><strong>Allergies:</strong> Sulfa</span></div>
+              <div class="labs"><b>Relevant labs</b><span class="ok">● CBC — Normal</span><span class="warn-dot">● CMP — Slightly high</span><span class="pending-dot">● EKG — Pending</span></div>
+              <a class="chart-link" href="patient-chart.html" aria-label="Open Patricia DePoli chart">View Chart →</a>
+            </article>
+
+            <article class="patient-box">
+              <div class="patient-time">8:45<br><small>AM</small></div><div class="avatar photo purple-bg">SD</div>
+              <div class="patient-identity"><a class="patient-link" href="patient-chart.html"><b>Sophia Diaz</b></a><span>40 · Female</span><span>ID: 114091</span><span>(213) 256-9190</span><em>Stuart Linder, MD</em></div>
+              <div class="procedure"><b>Reason for visit</b><p>Abdominal wound debridement with secondary wound closure.</p></div>
+              <div class="readiness ready"><b>AI Readiness Summary</b><p>Documents are complete. Wound culture is negative. Cleared for the procedure.</p><span><strong>Allergies:</strong> None known</span></div>
+              <div class="labs"><b>Relevant labs</b><span class="ok">● CBC — Normal</span><span class="ok">● BMP — Normal</span><span class="ok">● CRP — Normal</span></div>
+              <a class="chart-link" href="patient-chart.html" aria-label="Open Sophia Diaz chart">View Chart →</a>
+            </article>
+
+            <article class="patient-box">
+              <div class="patient-time">10:30<br><small>AM</small></div><div class="avatar photo green-bg">HR</div>
+              <div class="patient-identity"><a class="patient-link" href="patient-chart.html"><b>Holly Radom</b></a><span>41 · Female</span><span>ID: 114036</span><span>(805) 680-4838</span><em>Guy Massry, MD</em></div>
+              <div class="procedure"><b>Planned procedure</b><p>Upper blepharoplasty, fat grafting, and bilateral midface lift.</p></div>
+              <div class="readiness ready"><b>AI Readiness Summary</b><p>All clear for surgery. Medically optimized and cleared for anesthesia.</p><span><strong>Allergies:</strong> Latex</span></div>
+              <div class="labs"><b>Relevant labs</b><span class="ok">● CBC — Normal</span><span class="ok">● BMP — Normal</span><span class="ok">● A1C — Normal</span></div>
+              <a class="chart-link" href="patient-chart.html" aria-label="Open Holly Radom chart">View Chart →</a>
+            </article>
+
+            <article class="patient-box">
+              <div class="patient-time">1:00<br><small>PM</small></div><div class="avatar photo red-bg">AF</div>
+              <div class="patient-identity"><a class="patient-link" href="patient-chart.html"><b>Ashlee Fishman</b></a><span>49 · Female</span><span>ID: 113974</span><span>(310) 986-7411</span><em>Guy Massry, MD</em></div>
+              <div class="procedure"><b>Planned procedure</b><p>Endoscopic browlift, lower blepharoplasty with fat repositioning, and lower-lid work.</p></div>
+              <div class="readiness ready"><b>AI Readiness Summary</b><p>All required items are complete. Pre-op labs are normal. Ready for surgery.</p><span><strong>Allergies:</strong> None known</span></div>
+              <div class="labs"><b>Relevant labs</b><span class="ok">● CBC — Normal</span><span class="ok">● CMP — Normal</span><span class="ok">● Coags — Normal</span></div>
+              <a class="chart-link" href="patient-chart.html" aria-label="Open Ashlee Fishman chart">View Chart →</a>
+            </article>
+          </div>
+        </section>
+
+        <aside class="home-right">
+          <section class="card task-panel">
+            <div class="panel-title"><h2>Tasks <span class="count">8</span></h2><select aria-label="Task date range"><option>Next 14 Days</option><option>Next 7 Days</option><option>Today</option></select></div>
+            <div class="task-group"><h3>Due Today <span class="count">4</span></h3>
+              <label class="home-task"><input type="checkbox"><span><b>Confirm coverage for Wilson-Rozsa</b><small>Patient: Melissa Wilson-Rozsa</small></span><em>Due today <i class="priority high">High</i></em></label>
+              <label class="home-task"><input type="checkbox"><span><b>Sign off on Garcia's pre-op labs</b><small>Patient: Anthony Garcia</small></span><em>Due today <i class="priority high">High</i></em></label>
+              <label class="home-task"><input type="checkbox"><span><b>Verify implant availability for Weaver (OR #1)</b><small>Patient: Danielle Weaver</small></span><em>Due today <i class="priority medium">Medium</i></em></label>
+              <label class="home-task"><input type="checkbox"><span><b>Request EKG result for DePoli</b><small>Patient: Patricia DePoli</small></span><em>Due today <i class="priority medium">Medium</i></em></label>
+            </div>
+            <div class="task-group"><h3>This Week <span class="count">2</span></h3>
+              <label class="home-task"><input type="checkbox"><span><b>Follow up on Diaz wound-care supplies</b><small>Patient: Sophia Diaz</small></span><em>Jul 26 <i class="priority low">Low</i></em></label>
+              <label class="home-task"><input type="checkbox"><span><b>Complete anesthesia consult for Radom</b><small>Patient: Holly Radom</small></span><em>Jul 27 <i class="priority medium">Medium</i></em></label>
+            </div>
+            <div class="task-group"><h3>Next Week <span class="count">2</span></h3>
+              <label class="home-task"><input type="checkbox"><span><b>Post-op call for Fishman (48-hour follow-up)</b><small>Patient: Ashlee Fishman</small></span><em>Jul 29 <i class="priority low">Low</i></em></label>
+              <label class="home-task"><input type="checkbox"><span><b>Review and sign implant vendor contract</b><small>Owner: Administration</small></span><em>Jul 30 <i class="priority low">Low</i></em></label>
+            </div>
+          </section>
+          <section class="card small-queues"><div><h3>Waiting For <span class="count">7</span></h3><p>Insurance approval <b>2</b></p><p>Lab results <b>1</b></p><p>Implant shipment <b>1</b></p><p>Physician signature <b>3</b></p></div><div><h3>Communication Center <span class="count">6</span></h3><p>Patient messages <b>3</b></p><p>Referrals <b>1</b></p><p>Insurance <b>1</b></p><p>Lab notifications <b>1</b></p></div></section>
+        </aside>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

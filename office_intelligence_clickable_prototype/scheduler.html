@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Office Intelligence — AI Scheduler</title><link rel="stylesheet" href="styles.css"></head>
+    <body><div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <div><h1>OFFICE INTELLIGENCE</h1><small>The AI Operating System for Healthcare</small></div>
+      </div>
+      <nav class="nav"><a href="dashboard.html" class=""><span class="icon">◫</span><span class="label">Executive Dashboard</span></a>
+<a href="scheduler.html" class="active"><span class="icon">⌘</span><span class="label">AI Scheduler</span></a>
+<a href="patient.html" class=""><span class="icon">♙</span><span class="label">Patient SuperChart</span></a>
+<a href="continuous-care.html" class=""><span class="icon">♥</span><span class="label">Continuous Care</span></a>
+<a href="#" class=""><span class="icon">⌂</span><span class="label">My Practice</span></a>
+<a href="#" class=""><span class="icon">▤</span><span class="label">Billing & RCM</span></a>
+<a href="#" class=""><span class="icon">◒</span><span class="label">Analytics</span></a>
+<a href="#" class=""><span class="icon">✉</span><span class="label">Messages</span></a>
+<a href="#" class=""><span class="icon">⚙</span><span class="label">Settings</span></a></nav>
+      <div class="sidebar-footer">Nightingale AI<br><small>Always here. Always helping.</small></div>
+    </aside>
+    <main class="main">
+<div class="topbar"><div><h2>AI Scheduler</h2><div class="muted">Multi-room surgery scheduling with live resource intelligence</div></div>
+<div class="actions"><button class="btn" onclick="openAI('I found one conflict, one optimization opportunity, and one predicted delay.')">AI Insights</button><button class="btn primary" onclick="showToast('New case workflow opened')">+ Add Case</button></div></div>
+<section class="card">
+<div class="schedule-row schedule-header"><div>Rooms</div><div>7 AM</div><div>8 AM</div><div>9 AM</div><div>10 AM</div><div>11 AM</div><div>12 PM</div><div>1 PM</div><div>2 PM</div><div>3 PM</div></div>
+<div class="schedule-row"><div><strong>OR 1</strong><br><span class="muted">Main OR</span></div><div></div><div><div class="case green" onclick="openAI('Total Knee Arthroplasty is on time. All required forms, implants, and staffing are confirmed.')">Total Knee Arthroplasty<br>7:30–9:15</div></div><div></div><div></div><div><div class="case blue">Lap Cholecystectomy<br>9:45–11:15</div></div><div></div><div></div><div><div class="case purple">Hernia Repair<br>1:00–2:30</div></div><div></div></div>
+<div class="schedule-row"><div><strong>OR 2</strong><br><span class="muted">Main OR</span></div><div></div><div><div class="case orange" onclick="openAI('Shoulder Arthroscopy is projected to run 12 minutes late. Moving the next case by 15 minutes avoids resource overlap.')">Shoulder Arthroscopy<br>8:00–9:30<br>Delay 12m</div></div><div></div><div></div><div></div><div><div class="case green">Carpal Tunnel Release<br>10:45–11:45</div></div><div></div><div></div><div></div></div>
+<div class="schedule-row"><div><strong>OR 3</strong><br><span class="muted">Ortho OR</span></div><div></div><div><div class="case green">ACL Reconstruction<br>7:45–10:00</div></div><div></div><div></div><div></div><div><div class="case blue">Foot Bunionectomy<br>11:00–12:30</div></div><div></div><div></div><div></div></div>
+<div class="schedule-row"><div><strong>OR 4</strong><br><span class="muted">Spine OR</span></div><div></div><div></div><div><div class="case blue">Spinal Fusion<br>8:30–11:00</div></div><div></div><div></div><div></div><div></div><div><div class="case purple">Discectomy<br>12:30–2:00</div></div><div></div></div>
+</section>
+<div class="grid cols-4" style="margin-top:16px">
+<div class="card"><h3>Optimization</h3><p>Move Carpal Tunnel case up by 15 minutes.</p><button class="btn primary" onclick="showToast('Optimization applied in demo')">Apply Change</button></div>
+<div class="card"><h3>Conflict Alert</h3><p>Implant for Spinal Fusion arrives 30 minutes after case start.</p><button class="btn" onclick="showToast('Supply team notified')">Notify Supply</button></div>
+<div class="card"><h3>Resource Alert</h3><p>Dr. Davis has only 15 minutes between cases.</p><button class="btn" onclick="showToast('Turnover adjusted')">Adjust</button></div>
+<div class="card ai-panel"><h3>Prediction</h3><p>High probability of delays after 2 PM due to case complexity.</p><button class="btn primary" onclick="openAI('I can simulate three schedule scenarios and compare overtime risk.')">View Prediction</button></div>
+</div>
+</main></div>
+    <div class="overlay" id="overlay" onclick="closeAI()"></div>
+    <aside class="drawer" id="drawer"><div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="ai-title"><div class="ai-dot"></div><strong>Nightingale AI</strong></div><button class="btn" onclick="closeAI()">Close</button>
+    </div><div id="chat" class="chat"></div><div class="chat-input"><input id="chatText" placeholder="Ask Nightingale..." onkeydown="if(event.key==='Enter')sendChat()"><button class="btn primary" onclick="sendChat()">Send</button></div></aside>
+    <div class="toast" id="toast"></div><script src="app.js"></script></body></html>
